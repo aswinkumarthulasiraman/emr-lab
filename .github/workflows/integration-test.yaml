@@ -36,4 +36,5 @@ jobs:
 
       - name: Start pyspark job
         run: |
+          chmod a+x scripts/integration_test.sh
           scripts/integration_test.sh $TEST_APPLICATION_ID $JOB_ROLE_ARN $TEST_S3_BUCKET_NAME $GITHUB_SHA
