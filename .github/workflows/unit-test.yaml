@@ -3,9 +3,9 @@ on: [push]
 jobs:
   pytest:
     runs-on: ubuntu-20.04
-    defaults:
-      run:
-        working-directory: ./pyspark
+    #defaults:
+    #  run:
+    #    working-directory: ./pyspark
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.7.10
