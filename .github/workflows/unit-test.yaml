@@ -8,7 +8,7 @@ jobs:
         working-directory: ./pyspark
     steps:
       - uses: actions/checkout@v3
-        run: ls -lrt
+
       - name: Set up Python 3.7.10
         uses: actions/setup-python@v3
         with:
@@ -17,6 +17,7 @@ jobs:
           cache-dependency-path: '**/requirements-dev.txt'
       - name: Install dependencies
         run: |
+          ls -lrt
           python -m pip install -r requirements-dev.txt
       - name: Analysing the code with pytest
         run: |
