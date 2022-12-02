@@ -8,6 +8,7 @@ jobs:
         working-directory: ./pyspark
     steps:
       - uses: actions/checkout@v3
+        run: ls -lrt
       - name: Set up Python 3.7.10
         uses: actions/setup-python@v3
         with:
