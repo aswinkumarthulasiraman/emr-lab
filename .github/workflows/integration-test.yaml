@@ -4,11 +4,11 @@ on:
     types: [opened, reopened, synchronize]
 
 env:
-  TEST_APPLICATION_ID: < TEST EMR Serverless Application ID - TestApplicationId >
-  TEST_S3_BUCKET_NAME: < Test S3 Bucket Name - TestBucketName >
-  JOB_ROLE_ARN: < EMR Serverless Job Role ARN - EMRServerlessJobRoleArn >
-  OIDC_ROLE_ARN: < GitHub OIDC Job Role ARN - GitHubOIDCRoleArn >
-  AWS_REGION: us-east-1 < or any region you are using >
+  TEST_APPLICATION_ID: 00f613qhvddpe109
+  TEST_S3_BUCKET_NAME: ant309-test-524985753281
+  JOB_ROLE_ARN: arn:aws:iam::524985753281:role/ant309-cfn-EMRServerlessJobRole-EPA8T085T0MW
+  OIDC_ROLE_ARN: arn:aws:iam::524985753281:role/ant309-cfn-GitHubOIDCRole-11Q8BQJYT8DCT
+  AWS_REGION: us-east-1
 
 jobs:
   deploy-and-validate:
