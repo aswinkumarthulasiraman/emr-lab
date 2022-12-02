@@ -3,9 +3,9 @@ on: [push]
 jobs:
   pytest:
     runs-on: ubuntu-20.04
-    #defaults:
-    #  run:
-    #    working-directory: ./pyspark
+    defaults:
+      run:
+        working-directory: ./pyspark
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.7.10
@@ -16,7 +16,7 @@ jobs:
           cache-dependency-path: '**/requirements-dev.txt'
       - name: Install dependencies
         run: |
-          python -m pip install -r ./pyspark/requirements-dev.txt
+          python -m pip install -r requirements-dev.txt
       - name: Analysing the code with pytest
         run: |
           python3 -m pytest
